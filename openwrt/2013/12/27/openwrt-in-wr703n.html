@@ -117,7 +117,7 @@
 
 <p>安装usb模块</p>
 
-<div class="highlight"><pre><code class="bash">okpg update
+<div class="highlight"><pre><code class="bash">opkg update
 opkg install kmod-usb-ohci  kmod-usb-uhci
 </code></pre></div>
 
@@ -242,10 +242,10 @@ opkg install wget
 <h3>安装aria2实现命令行下载</h3>
 
 <div class="highlight"><pre><code class="bash">opkg update
-opkg install aira2
+opkg install aria2
 </code></pre></div>
 
-<h3>安装luci-app-aira2实现远程下载</h3>
+<h3>安装luci-app-aria2实现远程下载</h3>
 
 <p>我是到<a href="http://linfan.info/blog/2013/10/15/openwrt-packages/">几个非官方的openwrt软件包</a>下载的<a href="http://linfan.info/blog/files/luci-app-aria2_1.0_all.ipk">这个软件包</a>，安装使用下面的命令</p>
 
@@ -262,15 +262,15 @@ opkg install aira2
 
 <p>最后配置服务为自动启动</p>
 
-<div class="highlight"><pre><code class="bash">/etc/init.d/aira2 start
-/etc/init.d/aira2 <span class="nb">enable</span>
+<div class="highlight"><pre><code class="bash">/etc/init.d/aria2 start
+/etc/init.d/aria2 <span class="nb">enable</span>
 </code></pre></div>
 
 <h3>主路由器设置</h3>
 
 <p>在主路由器上</p>
 
-<p>映射6800 端口到 192.168.1.252， 以提供aira2 rpc 访问</p>
+<p>映射6800 端口到 192.168.1.252， 以提供aria2 rpc 访问</p>
 
 <p>映射80 端口到 192.168.1.252，以提供http访问</p>
 
