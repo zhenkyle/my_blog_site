@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Jave EE 开发环境配置</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">zhenke's blog</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          <h2>Jave EE 开发环境配置</h2>
+<p class="meta">04 Mar 2014</p>
+
+<div class="post">
+<p>以下步骤是Java EE 开发环境在32位Windows环境中的配置。</p>
+
+<h2>安装JDK</h2>
+
+<p>到[Oracle网站][http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html]下载 jdk-7u51-windows-i586.exe</p>
+
+<p>安装</p>
+
+<p>配置环境变量</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="no">JAVA_HOME</span> <span class="o">=</span> <span class="ss">C</span><span class="p">:\</span><span class="no">Program</span> <span class="no">Files</span><span class="p">\</span><span class="no">Java</span><span class="p">\</span><span class="n">jdk1</span><span class="o">.</span><span class="mi">7</span><span class="o">.</span><span class="mo">0_51</span>  <span class="c1">#JAVA_HOME 代表 JDK安装路径</span>
+<span class="no">CLASSPATH</span> <span class="o">=</span> <span class="o">%</span><span class="no">JAVA_HOME</span><span class="sx">%\lib\</span><span class="n">tools</span><span class="o">.</span><span class="n">jar</span><span class="p">;</span><span class="o">%</span><span class="no">JAVA_HOME</span><span class="sx">%\lib\</span><span class="n">dt</span><span class="o">.</span><span class="n">jar</span>
+<span class="no">PATH</span> <span class="err">中加入</span> <span class="o">%</span><span class="no">JAVA_HOME</span><span class="o">%</span><span class="p">\</span><span class="n">bin</span>  <span class="c1">#这条好像不做也可以</span>
+</code></pre></div>
+ 
+
+<h2>安装Tomcat</h2>
+
+<p>到[Tomcat网站][http://tomcat.apache.org/download-70.cgi] 下载 7.0.52 -- Binary Distribution - Core - [32bit Windows zip][http://mirrors.cnnic.cn/apache/tomcat/tomcat-7/v7.0.52/bin/apache-tomcat-7.0.52-windows-x86.zip]</p>
+
+<p>解压缩到 d:\java_dev\apache-tomcat-7.0.52 中</p>
+
+<p>配置环境变量</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="no">Tomcat</span> <span class="err">只需要</span> <span class="no">JAVA_HOME</span><span class="err">正常设置</span>
+</code></pre></div>
+ 
+
+<p>启动Tomcat</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">cd</span> <span class="ss">d</span><span class="p">:\</span><span class="n">java_dev</span><span class="p">\</span><span class="n">apache</span><span class="o">-</span><span class="n">tomcat</span><span class="o">-</span><span class="mi">7</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">52</span><span class="p">\</span><span class="n">bin</span>
+<span class="n">startup</span><span class="o">.</span><span class="n">bat</span>
+</code></pre></div>
+ 
+
+<p>停止Tomcat</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">cd</span> <span class="ss">d</span><span class="p">:\</span><span class="n">java_dev</span><span class="p">\</span><span class="n">apache</span><span class="o">-</span><span class="n">tomcat</span><span class="o">-</span><span class="mi">7</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">52</span><span class="p">\</span><span class="n">bin</span>
+<span class="n">shutdown</span><span class="o">.</span><span class="n">bat</span>
+</code></pre></div>
+ 
+
+<h2>安装Ant</h2>
+
+<p>到[Ant 网站][http://ant.apache.org/bindownload.cgi] 下载[apache-ant-1.9.3-bin.zip][http://apache.fayea.com/apache-mirror//ant/binaries/apache-ant-1.9.3-bin.zip]</p>
+
+<p>解压缩到 d:\java_dev\apache-ant-1.9.3 中</p>
+
+<p>配置环境变量</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="no">ANT_HOME</span> <span class="o">=</span> <span class="ss">d</span><span class="p">:\</span><span class="n">java_dev</span><span class="p">\</span><span class="n">apache</span><span class="o">-</span><span class="n">ant</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="mi">9</span><span class="o">.</span><span class="mi">3</span>
+<span class="no">PATH</span> <span class="err">中加入</span> <span class="o">%</span><span class="no">ANT_HOME</span><span class="o">%</span><span class="p">\</span><span class="n">bin</span>
+</code></pre></div>
+ 
+
+<h2>安装MySQL 5.1或更高版本</h2>
+
+<p>此处略</p>
+
+<h2>安装Eclipse</h2>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Your Name<br />
+                What You Are<br />
+                me@zhenkeblog.cn
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/zhenkyle">github.com/zhenkyle</a><br />
+                <a href="https://twitter.com/zhenkyle">twitter.com/zhenkyle</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
